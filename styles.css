@@ -1,3 +1,160 @@
-body { 
-    margin: 0; 
-    font-family: Arial, sans-serif; }
+
+:root {
+  --red: #8b1e3f;
+  --green: #556b2f;
+  --cream: #fdf5e6;
+  --charcoal: #2b2b2b;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  background-color: var(--cream);
+  color: var(--charcoal);
+  scroll-behavior: smooth;
+}
+
+h1, h2, .logo {
+  font-family: "Playfair Display", serif;
+}
+
+/* ------------------------------
+   HEADER + NAVIGATION
+------------------------------ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #2a2a40;
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.8rem;
+}
+
+/* Mobile menu checkbox */
+.nav-checkbox {
+  display: none;
+}
+
+.nav-toggle {
+  font-size: 2rem;
+  cursor: pointer;
+  display: block;
+  color: #fff;
+}
+
+/* Nav list (mobile default) */
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  flex-direction: column;
+  background-color: #2a2a40;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  left: 0;
+  padding: 1rem;
+}
+
+.nav-list a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  display: block;
+}
+
+/* Show menu when checkbox is checked */
+.nav-checkbox:checked + .nav-toggle + nav .nav-list {
+  display: flex;
+}
+
+/* Desktop nav */
+@media (min-width: 768px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    position: static;
+    background: none;
+  }
+
+  .nav-list a {
+    padding: 0;
+  }
+}
+
+/* ------------------------------
+   HERO SECTION
+------------------------------ */
+.hero {
+  background-image: url("../images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+  padding: 6rem 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--red);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* ------------------------------
+   MENU SECTION
+------------------------------ */
+.menu {
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.menu-grid img {
+  width: 100%;
+  border-radius: 16px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
+}
+
+/* ------------------------------
+   ABOUT + CONTACT
+------------------------------ */
+.about, .contact {
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+address {
+  font-style: normal;
+  text-align: center;
+  padding: 10px;
+}
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+footer {
+  background-color: #2a2a40;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
