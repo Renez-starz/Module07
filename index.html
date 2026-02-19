@@ -1,11 +1,90 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-<head> 
-    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Luigi's Italian Restaurant</title> 
-    <link rel="stylesheet" href="css/styles.css"> 
-</head> 
-<body> 
-    <h1>Luigi's Italian Restaurant</h1> 
-</body> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luigi's Italian Restaurant</title>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HEADER + NAV -->
+  <header>
+    <div class="logo">Luigi's</div>
+
+    <!-- Mobile menu checkbox -->
+    <input type="checkbox" id="nav-toggle" class="nav-checkbox" aria-label="Toggle navigation">
+    <label for="nav-toggle" class="nav-toggle">☰</label>
+
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="hero">
+    <h1>Welcome to Luigi's</h1>
+    <p>Authentic Italian cuisine made with love and tradition.</p>
+    <a href="#menu" class="btn">View Menu</a>
+  </section>
+
+  <!-- MENU SECTION -->
+  <section id="menu" class="menu">
+    <h2>Featured Dishes</h2>
+
+    <div class="menu-grid">
+      <figure>
+        <img src="images/margherita.png" alt="Margherita pizza with tomatoes and basil">
+        <figcaption>Margherita Pizza</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/lasagna.jpg" alt="Classic lasagna with cheese and basil">
+        <figcaption>Classic Lasagna</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/pasta.jpg" alt="Fresh pasta with tomato sauce">
+        <figcaption>Fresh Pasta</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about">
+    <h2>Our Story</h2>
+    <p>
+      Luigi’s has been serving traditional Italian dishes for over 25 years.
+      We believe in fresh ingredients, warm hospitality, and recipes passed down through generations.
+    </p>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <h2>Visit Us</h2>
+    <address>
+      123 Pasta Lane<br>
+      Raleigh, NC 27601<br>
+      (919) 555‑1234<br>
+      Open daily: 11am – 10pm
+    </address>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Luigi's Italian Restaurant</p>
+  </footer>
+
+</body>
 </html>
